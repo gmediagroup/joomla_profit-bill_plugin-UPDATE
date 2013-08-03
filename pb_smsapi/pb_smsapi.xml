@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content" method="upgrade">
+	<name>Profit Bill - Скрытие контента</name>
+	<author>profit-bill.com</author>
+	<creationDate>April 2011</creationDate>
+	<copyright>GNU/GPL</copyright>
+	<authorEmail>dv@profit-bill.com</authorEmail>
+	<authorUrl>http://profit-bill.com</authorUrl>
+	<version>1.6.0</version>
+	<description>Profit Bill - Скрытие контента</description>
+
+    <files>
+        <filename plugin="pb_smsapi">css/jquery-ui-1.8.14.custom.css</filename>
+        <filename plugin="pb_smsapi">css/pb_smsapi.css</filename>
+        <filename plugin="pb_smsapi">css/images/ui-bg_highlight-soft_75_cccccc_1x100.png</filename>
+        <filename plugin="pb_smsapi">css/images/ui-icons_222222_256x240.png</filename>
+        <filename plugin="pb_smsapi">css/images/ui-icons_454545_256x240.png</filename>
+
+        <filename plugin="pb_smsapi">js/jquery-1.5.1.min.js</filename>
+        <filename plugin="pb_smsapi">js/jquery-ui-1.8.14.custom.min.js</filename>
+        <filename plugin="pb_smsapi">js/pb_smsapi.js</filename>
+
+        <filename plugin="pb_smsapi">_init_joomla.php</filename>
+        <filename plugin="pb_smsapi">dialog.html</filename>
+        <filename plugin="pb_smsapi">pb_access.php</filename>
+        <filename plugin="pb_smsapi">pb_handler.php</filename>
+        <filename plugin="pb_smsapi">pb_models.php</filename>
+        <filename plugin="pb_smsapi">pb_smsapi.php</filename>
+	</files>
+
+	<config>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field name="smsapi_id" type="text" size="5" default="" label = "ID SMS API проекта" description = "" />
+                <field name="smsapi_secret" type="text" default="" label = "Секретный код" description = "Секретный код, указанный в настройках SMS API проекта" />
+                <field name="tag" type="text" default="pb_smsapi" label = "Укажите тег" description = "Тег, в который заключён скрытый текст ([Тег]Скрытый текст[/Тег])."/>
+                <field name="text" type="text" default="Показать текст полностью" label = "Текст" description = "Текст, который отображается вместо скрытого текста."/>
+                <field name="use_num" type="text" default="0" label = "Количество использований кода" description = "Сколько раз используется один код, 0 — неограниченно."/>
+                <field name="lifetime" type="text" default="0" label = "Время жизни введённого кода" description = "Время указывается в минутах, 0 — бесконечно."/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

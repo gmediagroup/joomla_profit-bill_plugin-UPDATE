@@ -1,0 +1,25 @@
+#pb_smsapi_dialog {
+    display: none;
+}
+#pb_smsapi_dialog #error_message.hidden {
+    display: none;
+}
+
+#pb_smsapi_dialog .content {
+    margin: 20px 0;
+}
+    #pb_smsapi_dialog .content .paragraph {
+        margin-bottom: 10px;
+    }
+    #pb_smsapi_dialog .content .instr_key {
+        font-weight: bold;
+    }
+
+    #pb_smsapi_dialog .content #error_message {
+        text-align: center;
+    }
+
+#pb_smsapi_dialog .footer {
+    font-size: 0.6em;
+    text-align: right;
+}

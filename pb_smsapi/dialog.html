@@ -1,0 +1,35 @@
+<div id="pb_smsapi_dialog" title="Для получения кода доступа следуйте инструкции">
+
+    <div class="content">
+
+        <div class="paragraph">
+            <div>
+                <label>Выберите страну, в которой вы проживаете</label>
+                <select name="country" id="country"></select>
+            </div>
+            <div>
+                Отправьте SMS с текстом <span id="message" class="instr_key"></span> на номер <span id="short_number" class="instr_key"></span>.
+                Стоимость SMS — <span id="price" class="instr_key"></span>.
+            </div>
+        </div>
+
+        <div class="paragraph">
+            <div>
+                После отправки сообщения дождитесь ответного SMS с кодом.
+                Полученный код введите в поле, размещенное ниже.
+            </div>
+            <div>
+                <form name="access" method="post" enctype="application/x-www-form-urlencoded" action="/plugins/content/pb_smsapi/pb_access.php">
+                    <p id="error_message" class="error hidden">Вы ввели неверный код, либо срок жизни кода истёк.</p>
+                    <input type="hidden" name="article_id" value="" />
+                    <input type="text" name="code" value="" />
+                    <input type="submit" value="Открыть доступ" />
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">Powered by: <a target="_blank" href="http://profit-bill.com">Profit-Bill.com</a></div>
+
+</div>
